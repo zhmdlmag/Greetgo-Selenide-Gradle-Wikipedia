@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class ContentsPage extends ConfigurationClass {
 
-    public ContentsPage(){
+    public ContentsPage() {
         configSetup();
         open("/wiki/Википедия:Содержание");
     }
@@ -21,19 +21,19 @@ public class ContentsPage extends ConfigurationClass {
             POLICY = $("#footer-places-privacy"),
             SEARCH = $("input.mw-ui-button");
 
-    public void checkInput(){
+    public void checkInput() {
         INPUT.shouldBe(Condition.visible);
     }
 
-    public void checkPolicy(){
+    public void checkPolicy() {
         POLICY.scrollIntoView(true).shouldBe(visible);
     }
 
-    public void checkInputFill(){
+    public void checkInputFill() {
         INPUT.setValue("гора").shouldHave(value("гора"));
     }
 
-    public SearchResultPage searchForValue(){
+    public SearchResultPage searchForValue() {
         checkInputFill();
         SEARCH.click();
         return new SearchResultPage();

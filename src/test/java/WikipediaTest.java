@@ -2,7 +2,7 @@ import org.testng.annotations.Test;
 import pom.ContentsPage;
 import pom.MainPage;
 
-public class WikipediaTest{
+public class WikipediaTest {
 
     @Test
     public void checkButtonTest() {
@@ -17,19 +17,19 @@ public class WikipediaTest{
     }
 
     @Test
-    public void checkConfTest(){
+    public void checkConfTest() {
         new ContentsPage()
                 .checkPolicy();
     }
 
     @Test
-    public void checkInputFillTest(){
+    public void checkInputFillTest() {
         new ContentsPage()
                 .searchForValue();
     }
 
     @Test
-    public void checkArticleCountTest(){
+    public void checkArticleCountTest() {
         new ContentsPage()
                 .searchForValue()
                 .checkArticlesCount();
